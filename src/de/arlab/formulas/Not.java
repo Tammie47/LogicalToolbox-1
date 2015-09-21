@@ -29,8 +29,13 @@ public class Not extends Formula {
 
 	@Override
 	public boolean syntEqual(Formula form) {
-		// TODO to implement
-		return false;
+		if(!(form instanceof Not)) {
+			return false;
+		}
+		
+		Not formNot = (Not) form;		
+		
+		return this.getF().syntEqual(formNot.getF());
 	}
 
 	@Override

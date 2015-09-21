@@ -29,8 +29,13 @@ public class Variable extends Formula implements Comparable<Variable> {
 
 	@Override
 	public boolean syntEqual(Formula f) {
-		// TODO to implement
-		return false;
+		if(!(f instanceof Variable)){
+			return false;
+		}
+		
+		Variable fVar = (Variable) f;
+		
+		return name == fVar.getName();		
 	}
 
 	@Override

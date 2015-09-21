@@ -16,6 +16,7 @@ public class F {
 	public static final Formula falsum = Formula.FALSUM;
 
 	public static final Variable var1 = new Variable("x1");
+	public static final Variable var1a = new Variable("x1");
 	public static final Variable var2 = new Variable("x2");
 	public static final Variable var3 = new Variable("x3");
 	public static final Variable var4 = new Variable("x4");
@@ -27,6 +28,7 @@ public class F {
 	public static final Formula f4 = new And(f3, var3);
 	public static final Formula f5 = new Or(f3, verum);
 	public static final Formula f6 = new Not(var1);
+	public static final Formula f6a = new Not(new Or(f6, f6));
 	public static final Formula f7 = new Not(f6);
 	public static final Formula f8 = new And(f2, var1);
 	public static final Formula f9 = new And(new Not(new Not(var1)), verum);

@@ -27,7 +27,7 @@ public class Falsum extends Formula {
 	@Override
 	public boolean syntEqual(Formula f) {
 		// TODO to implement
-		return false;
+		return this.evaluate(null) == f.evaluate(null);
 	}
 
 	@Override
