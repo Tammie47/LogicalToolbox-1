@@ -21,8 +21,13 @@ public class Or extends BinaryFormula {
 
 	@Override
 	public boolean syntEqual(Formula f) {
-		// TODO to implement
-		return false;
+		if(!(f instanceof Or)) {
+			return false;
+		}
+		
+		Or fOr = (Or) f;
+				
+		return this.getF1().syntEqual(fOr.getF1()) && this.getF2().syntEqual(fOr.getF2()) ;
 	}
 
 	@Override

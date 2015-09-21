@@ -21,8 +21,13 @@ public class And extends BinaryFormula {
 
 	@Override
 	public boolean syntEqual(Formula f) {
-		// TODO to implement
-		return false;
+		if(!(f instanceof And)) {
+			return false;
+		}
+		
+		And fAnd = (And) f;
+				
+		return this.getF1().syntEqual(fAnd.getF1()) && this.getF2().syntEqual(fAnd.getF2()) ;
 	}
 
 	@Override
